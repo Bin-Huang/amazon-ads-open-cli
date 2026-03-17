@@ -19,7 +19,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Bin-Huang/amazon-ads-cli.git"
+    "url": "https://github.com/Bin-Huang/amazon-ads-open-cli.git"
   },
   "engines": {
     "node": ">=18"
