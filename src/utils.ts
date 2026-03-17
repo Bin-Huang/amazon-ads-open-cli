@@ -6,7 +6,7 @@ export function output(data: unknown, format: string): void {
   process.stdout.write(text + "\n");
 }
 
-export function fatal(message: string): void {
+export function fatal(message: string): never {
   process.stderr.write(JSON.stringify({ error: message }) + "\n");
   process.exit(1);
 }

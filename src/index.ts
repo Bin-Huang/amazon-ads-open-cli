@@ -1,5 +1,9 @@
 #!/usr/bin/env node
+import { createRequire } from "node:module";
 import { Command } from "commander";
+
+const require = createRequire(import.meta.url);
+const { version } = require("../package.json") as { version: string };
 import { registerProfileCommands } from "./commands/profiles.js";
 import { registerCampaignCommands } from "./commands/campaigns.js";
 import { registerAdGroupCommands } from "./commands/adgroups.js";
@@ -16,12 +20,12 @@ program
   .description(
     "Amazon Ads CLI for AI agents (Sponsored Products, Brands, Display, DSP)"
   )
-  .version("1.0.0")
+  .version(version)
   .option("--format <format>", "Output format", "json")
   .option("--credentials <path>", "Path to credentials JSON file")
   .addHelpText(
     "after",
-    "\nDocs: https://github.com/Bin-Huang/amazon-ads-cli"
+    "\nDocs: https://github.com/Bin-Huang/amazon-ads-open-cli"
   );
 
 program.configureOutput({

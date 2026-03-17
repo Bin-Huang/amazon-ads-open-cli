@@ -11,7 +11,7 @@ export interface AmazonAdsCredentials {
 const CONFIG_PATH = join(
   homedir(),
   ".config",
-  "amazon-ads-cli",
+  "amazon-ads-open-cli",
   "credentials.json"
 );
 

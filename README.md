@@ -33,7 +33,7 @@ export AMAZON_ADS_PROFILE_ID="your_profile_id"
 
 ### Option 2: Credentials file
 
-Create `~/.config/amazon-ads-cli/credentials.json`:
+Create `~/.config/amazon-ads-open-cli/credentials.json`:
 
 ```json
 {
