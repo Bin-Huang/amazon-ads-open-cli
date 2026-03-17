@@ -1,11 +1,11 @@
-# amazon-ads-cli
+# amazon-ads-open-cli
 
 Amazon Ads CLI for AI agents. Read-only access to Amazon Advertising API for Sponsored Products, Sponsored Brands, Sponsored Display, and Amazon DSP.
 
 ## Installation
 
 ```bash
-npm install -g amazon-ads-cli
+npm install -g amazon-ads-open-cli
 ```
 
 ## How it works
@@ -21,7 +21,7 @@ npm install -g amazon-ads-cli
 
 1. A [Login with Amazon](https://developer.amazon.com/loginwithamazon/console/site/lwa/overview.html) app
 2. OAuth2 access token + client ID
-3. A profile ID (marketplace-specific, get it with `amazon-ads-cli profiles`)
+3. A profile ID (marketplace-specific, get it with `amazon-ads-open-cli profiles`)
 
 ### Option 1: Environment variables
 
@@ -46,7 +46,7 @@ Create `~/.config/amazon-ads-cli/credentials.json`:
 ### Option 3: Per-command credentials
 
 ```bash
-amazon-ads-cli profiles --credentials /path/to/creds.json
+amazon-ads-open-cli profiles --credentials /path/to/creds.json
 ```
 
 ## Entity hierarchy
@@ -74,7 +74,7 @@ Amazon Ads requires a **profile ID** to scope API calls to a specific marketplac
 List advertising profiles (marketplaces) accessible by this account. No profile ID required.
 
 ```bash
-amazon-ads-cli profiles
+amazon-ads-open-cli profiles
 ```
 
 ### profile
@@ -82,7 +82,7 @@ amazon-ads-cli profiles
 Get a specific advertising profile.
 
 ```bash
-amazon-ads-cli profile 1234567890
+amazon-ads-open-cli profile 1234567890
 ```
 
 ### sp-campaigns
@@ -90,8 +90,8 @@ amazon-ads-cli profile 1234567890
 List Sponsored Products campaigns.
 
 ```bash
-amazon-ads-cli sp-campaigns
-amazon-ads-cli sp-campaigns --state enabled
+amazon-ads-open-cli sp-campaigns
+amazon-ads-open-cli sp-campaigns --state enabled
 ```
 
 Options:
@@ -104,7 +104,7 @@ Options:
 Get a specific Sponsored Products campaign.
 
 ```bash
-amazon-ads-cli sp-campaign 123456
+amazon-ads-open-cli sp-campaign 123456
 ```
 
 ### sb-campaigns
@@ -112,7 +112,7 @@ amazon-ads-cli sp-campaign 123456
 List Sponsored Brands campaigns.
 
 ```bash
-amazon-ads-cli sb-campaigns
+amazon-ads-open-cli sb-campaigns
 ```
 
 Options: same as sp-campaigns
@@ -122,7 +122,7 @@ Options: same as sp-campaigns
 Get a specific Sponsored Brands campaign.
 
 ```bash
-amazon-ads-cli sb-campaign 123456
+amazon-ads-open-cli sb-campaign 123456
 ```
 
 ### sd-campaigns
@@ -130,7 +130,7 @@ amazon-ads-cli sb-campaign 123456
 List Sponsored Display campaigns.
 
 ```bash
-amazon-ads-cli sd-campaigns
+amazon-ads-open-cli sd-campaigns
 ```
 
 Options: same as sp-campaigns
@@ -140,7 +140,7 @@ Options: same as sp-campaigns
 Get a specific Sponsored Display campaign.
 
 ```bash
-amazon-ads-cli sd-campaign 123456
+amazon-ads-open-cli sd-campaign 123456
 ```
 
 ### sp-adgroups
@@ -148,8 +148,8 @@ amazon-ads-cli sd-campaign 123456
 List Sponsored Products ad groups.
 
 ```bash
-amazon-ads-cli sp-adgroups
-amazon-ads-cli sp-adgroups --campaign-id 123456
+amazon-ads-open-cli sp-adgroups
+amazon-ads-open-cli sp-adgroups --campaign-id 123456
 ```
 
 Options:
@@ -163,7 +163,7 @@ Options:
 Get a specific Sponsored Products ad group.
 
 ```bash
-amazon-ads-cli sp-adgroup 789012
+amazon-ads-open-cli sp-adgroup 789012
 ```
 
 ### sb-adgroups
@@ -171,7 +171,7 @@ amazon-ads-cli sp-adgroup 789012
 List Sponsored Brands ad groups.
 
 ```bash
-amazon-ads-cli sb-adgroups
+amazon-ads-open-cli sb-adgroups
 ```
 
 ### sd-adgroups
@@ -179,7 +179,7 @@ amazon-ads-cli sb-adgroups
 List Sponsored Display ad groups.
 
 ```bash
-amazon-ads-cli sd-adgroups --campaign-id 123456
+amazon-ads-open-cli sd-adgroups --campaign-id 123456
 ```
 
 ### sp-ads
@@ -187,8 +187,8 @@ amazon-ads-cli sd-adgroups --campaign-id 123456
 List Sponsored Products ads (product ads).
 
 ```bash
-amazon-ads-cli sp-ads
-amazon-ads-cli sp-ads --adgroup-id 789012
+amazon-ads-open-cli sp-ads
+amazon-ads-open-cli sp-ads --adgroup-id 789012
 ```
 
 Options:
@@ -202,7 +202,7 @@ Options:
 Get a specific Sponsored Products ad.
 
 ```bash
-amazon-ads-cli sp-ad 345678
+amazon-ads-open-cli sp-ad 345678
 ```
 
 ### sd-ads
@@ -210,7 +210,7 @@ amazon-ads-cli sp-ad 345678
 List Sponsored Display ads.
 
 ```bash
-amazon-ads-cli sd-ads --adgroup-id 789012
+amazon-ads-open-cli sd-ads --adgroup-id 789012
 ```
 
 ### sp-keywords
@@ -218,8 +218,8 @@ amazon-ads-cli sd-ads --adgroup-id 789012
 List Sponsored Products keywords.
 
 ```bash
-amazon-ads-cli sp-keywords
-amazon-ads-cli sp-keywords --campaign-id 123456 --state enabled
+amazon-ads-open-cli sp-keywords
+amazon-ads-open-cli sp-keywords --campaign-id 123456 --state enabled
 ```
 
 Options:
@@ -234,7 +234,7 @@ Options:
 List Sponsored Products negative keywords.
 
 ```bash
-amazon-ads-cli sp-negative-keywords --campaign-id 123456
+amazon-ads-open-cli sp-negative-keywords --campaign-id 123456
 ```
 
 ### sp-targets
@@ -242,7 +242,7 @@ amazon-ads-cli sp-negative-keywords --campaign-id 123456
 List Sponsored Products product targets (ASIN and category targeting).
 
 ```bash
-amazon-ads-cli sp-targets --adgroup-id 789012
+amazon-ads-open-cli sp-targets --adgroup-id 789012
 ```
 
 ### sb-targets
@@ -250,7 +250,7 @@ amazon-ads-cli sp-targets --adgroup-id 789012
 List Sponsored Brands targets.
 
 ```bash
-amazon-ads-cli sb-targets
+amazon-ads-open-cli sb-targets
 ```
 
 ### sd-targets
@@ -258,7 +258,7 @@ amazon-ads-cli sb-targets
 List Sponsored Display targets.
 
 ```bash
-amazon-ads-cli sd-targets --adgroup-id 789012
+amazon-ads-open-cli sd-targets --adgroup-id 789012
 ```
 
 ### sp-report
@@ -266,8 +266,8 @@ amazon-ads-cli sd-targets --adgroup-id 789012
 Request a Sponsored Products performance report (async).
 
 ```bash
-amazon-ads-cli sp-report --record-type campaigns --start-date 20260101 --end-date 20260131
-amazon-ads-cli sp-report --record-type keywords --start-date 20260101 --end-date 20260131 --metrics impressions,clicks,cost,sales14d
+amazon-ads-open-cli sp-report --record-type campaigns --start-date 20260101 --end-date 20260131
+amazon-ads-open-cli sp-report --record-type keywords --start-date 20260101 --end-date 20260131 --metrics impressions,clicks,cost,sales14d
 ```
 
 Options:
@@ -281,7 +281,7 @@ Options:
 Request a Sponsored Brands performance report.
 
 ```bash
-amazon-ads-cli sb-report --record-type campaigns --start-date 20260101 --end-date 20260131
+amazon-ads-open-cli sb-report --record-type campaigns --start-date 20260101 --end-date 20260131
 ```
 
 ### sd-report
@@ -289,7 +289,7 @@ amazon-ads-cli sb-report --record-type campaigns --start-date 20260101 --end-dat
 Request a Sponsored Display performance report.
 
 ```bash
-amazon-ads-cli sd-report --record-type campaigns --start-date 20260101 --end-date 20260131
+amazon-ads-open-cli sd-report --record-type campaigns --start-date 20260101 --end-date 20260131
 ```
 
 ### report-status
@@ -297,7 +297,7 @@ amazon-ads-cli sd-report --record-type campaigns --start-date 20260101 --end-dat
 Check report generation status and get download URL.
 
 ```bash
-amazon-ads-cli report-status amzn1.report.abc123
+amazon-ads-open-cli report-status amzn1.report.abc123
 ```
 
 ### dsp-orders
@@ -305,7 +305,7 @@ amazon-ads-cli report-status amzn1.report.abc123
 List DSP orders (programmatic display/video).
 
 ```bash
-amazon-ads-cli dsp-orders
+amazon-ads-open-cli dsp-orders
 ```
 
 ### dsp-order
@@ -313,7 +313,7 @@ amazon-ads-cli dsp-orders
 Get a specific DSP order.
 
 ```bash
-amazon-ads-cli dsp-order 123456
+amazon-ads-open-cli dsp-order 123456
 ```
 
 ### dsp-line-items
@@ -321,7 +321,7 @@ amazon-ads-cli dsp-order 123456
 List DSP line items.
 
 ```bash
-amazon-ads-cli dsp-line-items --order-id 123456
+amazon-ads-open-cli dsp-line-items --order-id 123456
 ```
 
 ### dsp-creatives
@@ -329,7 +329,7 @@ amazon-ads-cli dsp-line-items --order-id 123456
 List DSP creatives.
 
 ```bash
-amazon-ads-cli dsp-creatives
+amazon-ads-open-cli dsp-creatives
 ```
 
 ### audiences
@@ -337,7 +337,7 @@ amazon-ads-cli dsp-creatives
 List DSP audiences.
 
 ```bash
-amazon-ads-cli audiences
+amazon-ads-open-cli audiences
 ```
 
 ### audience
@@ -345,7 +345,7 @@ amazon-ads-cli audiences
 Get a specific audience.
 
 ```bash
-amazon-ads-cli audience 123456
+amazon-ads-open-cli audience 123456
 ```
 
 ### brand-safety-lists
@@ -353,7 +353,7 @@ amazon-ads-cli audience 123456
 List brand safety deny lists.
 
 ```bash
-amazon-ads-cli brand-safety-lists
+amazon-ads-open-cli brand-safety-lists
 ```
 
 ## Error output

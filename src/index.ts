@@ -12,7 +12,7 @@ import { registerAudienceCommands } from "./commands/audiences.js";
 const program = new Command();
 
 program
-  .name("amazon-ads-cli")
+  .name("amazon-ads-open-cli")
   .description(
     "Amazon Ads CLI for AI agents (Sponsored Products, Brands, Display, DSP)"
   )
