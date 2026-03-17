@@ -17,7 +17,6 @@ export function registerReportCommands(program: Command): void {
     .description("Request a Sponsored Products performance report")
     .requiredOption("--record-type <type>", "Record type: campaigns, adGroups, productAds, keywords, targets")
     .requiredOption("--start-date <date>", "Start date (YYYYMMDD)")
-    .requiredOption("--end-date <date>", "End date (YYYYMMDD)")
     .option("--metrics <metrics>", "Metrics (comma-separated): impressions, clicks, cost, sales14d, etc.")
     .action(async (opts) => {
       try {
@@ -44,7 +43,6 @@ export function registerReportCommands(program: Command): void {
     .description("Request a Sponsored Brands performance report")
     .requiredOption("--record-type <type>", "Record type: campaigns, adGroups, keywords")
     .requiredOption("--start-date <date>", "Start date (YYYYMMDD)")
-    .requiredOption("--end-date <date>", "End date (YYYYMMDD)")
     .option("--metrics <metrics>", "Metrics (comma-separated): impressions, clicks, cost, etc.")
     .action(async (opts) => {
       try {
@@ -71,7 +69,6 @@ export function registerReportCommands(program: Command): void {
     .description("Request a Sponsored Display performance report")
     .requiredOption("--record-type <type>", "Record type: campaigns, adGroups, productAds, targets")
     .requiredOption("--start-date <date>", "Start date (YYYYMMDD)")
-    .requiredOption("--end-date <date>", "End date (YYYYMMDD)")
     .option("--metrics <metrics>", "Metrics (comma-separated): impressions, clicks, cost, etc.")
     .action(async (opts) => {
       try {

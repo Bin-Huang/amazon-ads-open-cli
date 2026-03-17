@@ -174,6 +174,10 @@ List Sponsored Brands ad groups.
 amazon-ads-open-cli sb-adgroups
 ```
 
+Options:
+- `--start-index <n>` -- start index (default 0)
+- `--count <n>` -- results per page (default 100)
+
 ### sd-adgroups
 
 List Sponsored Display ad groups.
@@ -181,6 +185,11 @@ List Sponsored Display ad groups.
 ```bash
 amazon-ads-open-cli sd-adgroups --campaign-id 123456
 ```
+
+Options:
+- `--start-index <n>` -- start index (default 0)
+- `--count <n>` -- results per page (default 100)
+- `--campaign-id <id>` -- filter by campaign
 
 ### sp-ads
 
@@ -213,6 +222,11 @@ List Sponsored Display ads.
 amazon-ads-open-cli sd-ads --adgroup-id 789012
 ```
 
+Options:
+- `--start-index <n>` -- start index (default 0)
+- `--count <n>` -- results per page (default 100)
+- `--adgroup-id <id>` -- filter by ad group
+
 ### sp-keywords
 
 List Sponsored Products keywords.
@@ -237,6 +251,12 @@ List Sponsored Products negative keywords.
 amazon-ads-open-cli sp-negative-keywords --campaign-id 123456
 ```
 
+Options:
+- `--start-index <n>` -- start index (default 0)
+- `--count <n>` -- results per page (default 100)
+- `--adgroup-id <id>` -- filter by ad group
+- `--campaign-id <id>` -- filter by campaign
+
 ### sp-targets
 
 List Sponsored Products product targets (ASIN and category targeting).
@@ -244,6 +264,12 @@ List Sponsored Products product targets (ASIN and category targeting).
 ```bash
 amazon-ads-open-cli sp-targets --adgroup-id 789012
 ```
+
+Options:
+- `--start-index <n>` -- start index (default 0)
+- `--count <n>` -- results per page (default 100)
+- `--adgroup-id <id>` -- filter by ad group
+- `--state <state>` -- filter: enabled, paused, archived
 
 ### sb-targets
 
@@ -253,6 +279,10 @@ List Sponsored Brands targets.
 amazon-ads-open-cli sb-targets
 ```
 
+Options:
+- `--start-index <n>` -- start index (default 0)
+- `--count <n>` -- results per page (default 100)
+
 ### sd-targets
 
 List Sponsored Display targets.
@@ -261,19 +291,23 @@ List Sponsored Display targets.
 amazon-ads-open-cli sd-targets --adgroup-id 789012
 ```
 
+Options:
+- `--start-index <n>` -- start index (default 0)
+- `--count <n>` -- results per page (default 100)
+- `--adgroup-id <id>` -- filter by ad group
+
 ### sp-report
 
 Request a Sponsored Products performance report (async).
 
 ```bash
-amazon-ads-open-cli sp-report --record-type campaigns --start-date 20260101 --end-date 20260131
-amazon-ads-open-cli sp-report --record-type keywords --start-date 20260101 --end-date 20260131 --metrics impressions,clicks,cost,sales14d
+amazon-ads-open-cli sp-report --record-type campaigns --start-date 20260101
+amazon-ads-open-cli sp-report --record-type keywords --start-date 20260101 --metrics impressions,clicks,cost,sales14d
 ```
 
 Options:
 - `--record-type <type>` -- campaigns, adGroups, productAds, keywords, targets **required**
 - `--start-date <date>` -- YYYYMMDD **required**
-- `--end-date <date>` -- YYYYMMDD **required**
 - `--metrics <metrics>` -- comma-separated (default: impressions, clicks, cost, sales14d)
 
 ### sb-report
@@ -281,7 +315,7 @@ Options:
 Request a Sponsored Brands performance report.
 
 ```bash
-amazon-ads-open-cli sb-report --record-type campaigns --start-date 20260101 --end-date 20260131
+amazon-ads-open-cli sb-report --record-type campaigns --start-date 20260101
 ```
 
 ### sd-report
@@ -289,7 +323,7 @@ amazon-ads-open-cli sb-report --record-type campaigns --start-date 20260101 --en
 Request a Sponsored Display performance report.
 
 ```bash
-amazon-ads-open-cli sd-report --record-type campaigns --start-date 20260101 --end-date 20260131
+amazon-ads-open-cli sd-report --record-type campaigns --start-date 20260101
 ```
 
 ### report-status
@@ -308,6 +342,10 @@ List DSP orders (programmatic display/video).
 amazon-ads-open-cli dsp-orders
 ```
 
+Options:
+- `--start-index <n>` -- start index (default 0)
+- `--count <n>` -- results per page (default 100)
+
 ### dsp-order
 
 Get a specific DSP order.
@@ -324,6 +362,11 @@ List DSP line items.
 amazon-ads-open-cli dsp-line-items --order-id 123456
 ```
 
+Options:
+- `--order-id <id>` -- filter by order ID
+- `--start-index <n>` -- start index (default 0)
+- `--count <n>` -- results per page (default 100)
+
 ### dsp-creatives
 
 List DSP creatives.
@@ -332,6 +375,10 @@ List DSP creatives.
 amazon-ads-open-cli dsp-creatives
 ```
 
+Options:
+- `--start-index <n>` -- start index (default 0)
+- `--count <n>` -- results per page (default 100)
+
 ### audiences
 
 List DSP audiences.
@@ -339,6 +386,10 @@ List DSP audiences.
 ```bash
 amazon-ads-open-cli audiences
 ```
+
+Options:
+- `--start-index <n>` -- start index (default 0)
+- `--count <n>` -- results per page (default 100)
 
 ### audience
 
@@ -363,10 +414,6 @@ All errors are JSON to stderr:
 ```json
 {"error": "No credentials found. Set AMAZON_ADS_ACCESS_TOKEN + AMAZON_ADS_CLIENT_ID env vars..."}
 ```
-
-## API regions
-
-Amazon Ads API has regional endpoints. This CLI defaults to the North America endpoint (`advertising-api.amazon.com`). For EU use `advertising-api-eu.amazon.com`, for Far East use `advertising-api-fe.amazon.com`.
 
 ## API Reference
 
