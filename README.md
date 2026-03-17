@@ -1,6 +1,8 @@
 # amazon-ads-open-cli
 
-Amazon Ads CLI for AI agents. Read-only access to Amazon Advertising API for Sponsored Products, Sponsored Brands, Sponsored Display, and Amazon DSP.
+Amazon Ads CLI for AI agents (and humans). Manage Sponsored Products, Brands, Display, and DSP campaigns across marketplaces, generate async reports, configure brand safety, and more.
+
+**Works with:** OpenClaw, Claude Code, Cursor, Codex, and any agent that can run shell commands.
 
 ## Installation
 
@@ -8,12 +10,24 @@ Amazon Ads CLI for AI agents. Read-only access to Amazon Advertising API for Spo
 npm install -g amazon-ads-open-cli
 ```
 
+Or run directly with npx:
+
+```bash
+npx amazon-ads-open-cli --help
+```
+
 ## How it works
 
-- All output is JSON to stdout (machine-readable)
-- Errors go to stderr as `{"error": "..."}`
-- Exit code 0 = success, non-zero = failure
-- Uses Amazon Advertising API v2/v3
+Built on the official [Amazon Advertising API](https://advertising.amazon.com/API/docs/en-us/info/api-overview) (v2/v3). Authenticates via OAuth2 using a Login with Amazon app -- you provide an access token and client ID, scoped to a specific marketplace profile.
+
+Core endpoints covered:
+
+- **Profiles** -- list and inspect marketplace profiles
+- **Sponsored Products** -- campaigns, ad groups, ads, keywords, negative keywords, targets, and performance reports
+- **Sponsored Brands** -- campaigns, ad groups, targets, and performance reports
+- **Sponsored Display** -- campaigns, ad groups, ads, targets, and performance reports
+- **Amazon DSP** -- orders, line items, creatives, audiences, and brand safety lists
+- **Reporting** -- async report requests and status polling for all ad types
 
 ## Setup
 
