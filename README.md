@@ -10,11 +10,7 @@ Amazon Ads CLI for AI agents (and humans). Manage Sponsored Products, Brands, Di
 npm install -g amazon-ads-open-cli
 ```
 
-Or run directly with npx:
-
-```bash
-npx amazon-ads-open-cli --help
-```
+Or run directly: `npx amazon-ads-open-cli --help`
 
 ## How it works
 
