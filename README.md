@@ -70,7 +70,8 @@ Profile (marketplace: US, UK, DE, JP, etc.)
  ├── Sponsored Display
  │    └── Campaign → Ad Group → Product Ad / Target
  └── DSP (programmatic)
-      └── Order → Line Item → Creative → Audience
+      ├── Advertiser → Order → Line Item → Creative
+      └── Audience (configured at Line Item level)
 ```
 
 ## Profiles and marketplace
