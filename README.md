@@ -8,7 +8,7 @@ Amazon Ads CLI for AI agents (and humans). Manage Sponsored Products, Brands, Di
 
 Tell your AI agent (e.g. OpenClaw):
 
-> Install the CLI and skills from https://github.com/Bin-Huang/amazon-ads-open-cli
+> Install this CLI and skills from https://github.com/Bin-Huang/amazon-ads-open-cli
 
 Or install manually:
 
