@@ -18,7 +18,7 @@ const program = new Command();
 program
   .name("amazon-ads-open-cli")
   .description(
-    "Amazon Ads CLI for AI agents (Sponsored Products, Brands, Display, DSP)"
+    "Amazon Ads CLI & Skills for AI agents (Sponsored Products, Brands, Display, DSP)"
   )
   .version(version)
   .option("--format <format>", "Output format", "json")

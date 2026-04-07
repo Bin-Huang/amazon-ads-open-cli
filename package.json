@@ -1,7 +1,7 @@
 {
   "name": "amazon-ads-open-cli",
   "version": "1.0.3",
-  "description": "Amazon Ads CLI for AI agents",
+  "description": "Amazon Ads CLI & Skills for AI agents",
   "type": "module",
   "bin": {
     "amazon-ads-open-cli": "dist/index.js"
